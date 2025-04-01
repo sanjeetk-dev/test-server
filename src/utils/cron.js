@@ -1,7 +1,7 @@
 import cron from "cron"
 import nodemailer from "nodemailer"
 import https from "https"
-const job = new cron.CronJob("*/10 * * * *", async () => {
+export const job = new cron.CronJob("*/10 * * * *", async () => {
   
   https
     .get("", (res) => {
