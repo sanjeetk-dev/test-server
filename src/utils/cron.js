@@ -4,7 +4,7 @@ import https from "https"
 export const job = new cron.CronJob("*/10 * * * *", async () => {
   
   https
-    .get("", (res) => {
+    .get(process.env.URL, (res) => {
       if(res.statusCode === 200) console.log("works")
       else console.log("not wroked")
     })
